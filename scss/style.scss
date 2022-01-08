@@ -1,6 +1,10 @@
+@import "colors";
+
 body {
+    height: auto;
     font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Red Hat Display',
+        sans-serif;
     line-height: 1.5rem;
 }
 
@@ -72,26 +76,144 @@ span {
 
 /* container max width -------------------  */
 
+body {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: $planBG;
+
+    @media screen and (max-width:425px) {
+        background-image: url(../images/pattern-background-mobile.svg);
+    }
+
+}
+
+.poiner {
+    cursor: pointer;
+}
+
 .container {
     width: 100%;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    max-width: 1160px;
+    margin: 100px auto;
+    padding: 0 10px;
+    max-width: 461px;
+
+    @media screen and (max-width:425px) {
+        margin-top: 70px;
+    }
 }
 
-.header {
-    margin: 0 auto;
-    background-color: blue;
+.card {
+    background-color: white;
+    text-align: center;
+    max-width: 100%;
+    border-radius: 19px;
+    overflow: hidden;
+
+    h1 {
+        font-weight: 900;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: $header;
+    }
+
+    p {
+        max-width: 300px;
+        margin: 0 auto 20px;
+    }
 }
 
-/* main -------------------  */
-.main {
-    margin: 0 auto;
-    flex: 1 1 auto;
+.header-animation {
+    background-image: url(../images/illustration-hero.svg);
+    width: 100%;
+    height: 220px;
+    background-position: center;
+    margin-bottom: 30px;
 }
 
-/* footer -------------------  */
-.footer {
-    margin: 0 auto;
-    background-color: red;
+.main-content {
+    padding: 0 47px 80px;
+
+    @media screen and (max-width:425px) {
+        padding: 0 25px 80px;
+    }
+}
+
+.plan {
+    margin-bottom: 50px;
+    background-color: $buttonTextColor;
+    border-radius: 19px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background-image: url(../images/icon-music.svg);
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    background-position: 25px center;
+
+    a {
+        font-weight: 900;
+        color: $buttonBG;
+        text-decoration: underline;
+
+        &:hover {
+            color: $hover;
+        }
+    }
+
+    @media screen and (max-width:425px) {
+        padding: 15px;
+        background-position: 10px center;
+    }
+}
+
+
+
+.plan__price {
+    height: 50px;
+    padding-left: 65px;
+    justify-content: space-between;
+
+    @media screen and (max-width:425px) {
+        justify-content: space-evenly;
+        padding-left: 50px;
+    }
+
+    h2 {
+        font-size: 16px;
+        line-height: normal;
+        color: $header;
+        font-weight: 900;
+    }
+
+    span {
+        color: $textColor;
+    }
+
+
+}
+
+.button {
+    border-radius: 14px;
+    line-height: 3.5rem;
+    background-color: $buttonBG;
+    color: $buttonTextColor;
+    margin-bottom: 30px;
+    box-shadow: 0px 24px 10px rgba(56, 42, 225, 0.1);
+
+    &:hover {
+        background-color: $hover;
+    }
+}
+
+.footer-link {
+    color: $textColor;
+    font-weight: 900;
+
+    a {
+
+        &:hover {
+            color: $header;
+        }
+    }
 }
